@@ -8,7 +8,7 @@
 
     <link href="./css/bootstrap.min.css" rel="stylesheet">
     <link href="./css/font-awesome.min.css" rel="stylesheet">
-    <link href="./jquery.modal.min.css" rel="stylesheet">
+    <!-- <link href="./css/jquery.modal.min.css" rel="stylesheet"> -->
     <link href="./css/style.css" rel="stylesheet">
   </head>
 
@@ -92,7 +92,7 @@
         <div class="col-lg-8 col-lg-offset-2">
           <h2>Sign In</h2>
           <p>If you do not have current accout you can register <a href="#">here</a>.</p>
-          <a href="" class="btn btn-default btn-lg">Sign In</a>
+          <button id="sign-btn" class="btn btn-default btn-lg">Sign In</button>
         </div>
         </div>
       </div>
@@ -132,11 +132,43 @@
 
     <!--
     ///////////////////////////////////////////////////////////////////////////
+    :Modals
+    ///////////////////////////////////////////////////////////////////////////
+    -->
+    <div class="modal fade" id="sign-modal" role="dialog">
+      <div class="modal-dialog">
+      <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title text-info">Sign In</h4>
+          </div>
+
+          <form id="sign-form">
+            <div class="modal-body">
+                <label class="text-primary">Username:</label>
+                <input class="form-control" type="text">
+                <label class="text-primary">Username:</label>
+                <input class="form-control" type="text">
+            </div>
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Sign In</button>
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////
     :Script
     ///////////////////////////////////////////////////////////////////////////
     -->
     <script src="./js/jquery-3.1.1.min.js"></script>
-    <script src="./js/jquery.modal.min.js"></script>
+    <!-- <script src="./js/jquery.modal.min.js"></script> -->
     <script src="./js/bootstrap.min.js"></script>
     <script src="./js/script.js"></script>
 

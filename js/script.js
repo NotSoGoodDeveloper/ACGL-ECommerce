@@ -18,10 +18,20 @@ $(function() {
   });
 });
 
-$(window).scroll(collapseNavbar);
-$(document).ready(collapseNavbar);
-
 // Closes the Responsive Menu on Menu Item Click
 $('.navbar-collapse ul li a').click(function() {
   $(".navbar-collapse").collapse('hide');
+});
+
+$(window).scroll(collapseNavbar);
+$(document).ready(function() {
+  collapseNavbar();
+
+  // sign in show modal
+  $("#sign-btn").click(function() {
+    $("#sign-modal").modal({
+      backdrop: 'static',
+      keyboard: false
+    });
+  });
 });
