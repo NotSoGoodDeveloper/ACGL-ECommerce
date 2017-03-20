@@ -44,7 +44,7 @@ p {
 }
 
 a {
-  color: #42DCA3;
+  color: #3498db;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
@@ -53,7 +53,7 @@ a {
 a:hover,
 a:focus {
   text-decoration: none;
-  color: #1d9b6c;
+  color: #3498db;
 }
 
 .light {
@@ -154,7 +154,7 @@ Intro Header
   padding: 100px 0;
   text-align: center;
   color: white;
-  background: url("./img/intro-bg.jpg") no-repeat bottom center scroll;
+  background: url("../img/intro-bg.jpg") no-repeat bottom center scroll;
   background-color: black;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -270,7 +270,8 @@ Intro Header
   width: 100%;
   padding: 50px 0;
   color: white;
-  background: url("./img/sign-bg.jpg") no-repeat center center scroll;
+  background: url("../img/sign-bg.jpg") no-repeat center center scroll;
+  background-attachment: fixed;
   background-color: black;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -289,17 +290,17 @@ Intro Header
 }
 
 .btn-default {
-  border: 1px solid #42DCA3;
-  color: #42DCA3;
+  border: 1px solid #3498db;
+  color: #3498db;
   background-color: transparent;
 }
 
 .btn-default:hover,
 .btn-default:focus {
-  border: 1px solid #42DCA3;
+  border: 1px solid #3498db;
   outline: none;
   color: black;
-  background-color: #42DCA3;
+  background-color: #3498db;
 }
 
 /*
