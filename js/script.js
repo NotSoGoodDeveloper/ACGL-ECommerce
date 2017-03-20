@@ -34,4 +34,27 @@ $(document).ready(function() {
       keyboard: false
     });
   });
+
+  $("#sign-form").submit(function(event) {
+    event.preventDefault();
+
+    $.ajax({
+      url: "sign-action.php",
+      method: "post",
+      dataType: "json",
+      data: $("#sign-form").serialize(),
+      success: function(data) {
+        // close popup
+        $('#sign-modal').modal('toggle');
+
+        if (data) {
+          // open login page
+          window.location = "user.php";
+        } else {
+          // show error
+          $("#sign-error-modal").modal();
+        }
+      }
+    });
+  });
 });

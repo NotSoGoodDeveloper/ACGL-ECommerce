@@ -8,7 +8,6 @@
 
     <link href="./css/bootstrap.min.css" rel="stylesheet">
     <link href="./css/font-awesome.min.css" rel="stylesheet">
-    <!-- <link href="./css/jquery.modal.min.css" rel="stylesheet"> -->
     <link href="./css/style.css" rel="stylesheet">
   </head>
 
@@ -135,32 +134,56 @@
     :Modals
     ///////////////////////////////////////////////////////////////////////////
     -->
+    <!-- Sign in Modal -->
     <div class="modal fade" id="sign-modal" role="dialog">
       <div class="modal-dialog">
       <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title text-info">Sign In</h4>
+        </div>
+
+        <form id="sign-form">
+          <div class="modal-body">
+              <label class="text-primary">Username:</label>
+              <input class="form-control" name="username" type="text" required>
+              <label class="text-primary">Password:</label>
+              <input class="form-control" name="password" type="text" required>
+          </div>
+
+          <div class="modal-footer">
+            <input class="btn btn-default" type="submit" value="Sign In">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </form>
+
+      </div>
+      </div>
+    </div>
+
+    <!-- Sign in Modal -->
+    <div class="modal fade" id="sign-error-modal" role="dialog">
+      <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title text-info">Sign In</h4>
+            <h4 class="modal-title text-danger">Error Sign In</h4>
           </div>
 
-          <form id="sign-form">
-            <div class="modal-body">
-                <label class="text-primary">Username:</label>
-                <input class="form-control" type="text">
-                <label class="text-primary">Username:</label>
-                <input class="form-control" type="text">
-            </div>
+          <div class="modal-body">
+            <p class="text-danger">Please try again...</p>
+          </div>
 
-            <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Sign In</button>
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
-          </form>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </form>
 
         </div>
       </div>
     </div>
+
 
     <!--
     ///////////////////////////////////////////////////////////////////////////
@@ -168,7 +191,6 @@
     ///////////////////////////////////////////////////////////////////////////
     -->
     <script src="./js/jquery-3.1.1.min.js"></script>
-    <!-- <script src="./js/jquery.modal.min.js"></script> -->
     <script src="./js/bootstrap.min.js"></script>
     <script src="./js/script.js"></script>
 
