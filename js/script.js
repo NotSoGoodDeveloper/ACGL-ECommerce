@@ -61,4 +61,13 @@ $(document).ready(function() {
     });
   }); // END sign form submit
 
+  // sign up show modal
+  $("#sign-up-btn").click(function(event) {
+    event.preventDefault();
+    $("#sign-up-modal").modal({
+      backdrop: 'static',
+      keyboard: false
+    });
+  });
+
 }); // END document ready

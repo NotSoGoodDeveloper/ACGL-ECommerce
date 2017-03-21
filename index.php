@@ -88,7 +88,7 @@
         <div class="container">
         <div class="col-lg-8 col-lg-offset-2">
           <h2>Sign In</h2>
-          <p>If you do not have current accout you can register <a href="#">here</a>.</p>
+          <p>If you do not have current accout you can register <a id="sign-up-btn" href="#">here</a>.</p>
           <button id="sign-btn" class="btn btn-default btn-lg">Sign In</button>
         </div>
         </div>
@@ -176,6 +176,33 @@
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
           </div>
+        </div> <!-- :END modal-content -->
+      </div> <!-- :END modal-dialog -->
+    </div> <!-- :END sign-error-modal -->
+
+    <!-- Sign up Error Modal -->
+    <div class="modal fade" id="sign-up-modal" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title text-info">Sign In</h4>
+          </div>
+
+          <form id="sign-form">
+            <div class="modal-body">
+              <label class="text-primary">Username:</label>
+              <input class="form-control" name="username" type="text" required>
+              <label class="text-primary">Password:</label>
+              <input class="form-control" name="password" type="text" required>
+            </div>
+
+            <div class="modal-footer">
+              <input class="btn btn-default" type="submit" value="Sign In">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </form>
+
         </div> <!-- :END modal-content -->
       </div> <!-- :END modal-dialog -->
     </div> <!-- :END sign-error-modal -->
