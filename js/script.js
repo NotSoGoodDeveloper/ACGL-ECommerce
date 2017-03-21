@@ -31,16 +31,17 @@ $(document).ready(function() {
   // sign in show modal
   $("#sign-btn").click(function() {
 
-    $("#sign-error-modal").modal();
-    // $("#sign-modal").modal({
-    //   backdrop: 'static',
-    //   keyboard: false
-    // });
+    $("#sign-modal").modal({
+      backdrop: 'static',
+      keyboard: false
+    });
   });
 
   // sign in form
   $("#sign-form").submit(function(event) {
     event.preventDefault();
+    // close popup
+    $('#sign-modal').modal("hide");
 
     $.ajax({
       url: "lib/action/sign-action.php",
@@ -48,8 +49,6 @@ $(document).ready(function() {
       dataType: "json",
       data: $("#sign-form").serialize(),
       success: function(data) {
-        // close popup
-        $('#sign-modal').modal('toggle');
 
         if (data) {
           // open login page

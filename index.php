@@ -133,7 +133,7 @@
     ///////////////////////////////////////////////////////////////////////////
     -->
     <!-- Sign in Modal -->
-    <div class="modal fade" id="sign-modal" role="dialog">
+    <div class="modal" id="sign-modal" role="dialog">
       <div class="modal-dialog">
         <!-- Modal content-->
         <div class="modal-content">
@@ -176,9 +176,7 @@
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
           </div>
-        </form>
-
-      </div> <!-- :END modal-content -->
+        </div> <!-- :END modal-content -->
       </div> <!-- :END modal-dialog -->
     </div> <!-- :END sign-error-modal -->
 
