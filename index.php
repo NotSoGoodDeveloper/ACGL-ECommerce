@@ -137,28 +137,28 @@
     <!-- Sign in Modal -->
     <div class="modal fade" id="sign-modal" role="dialog">
       <div class="modal-dialog">
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title text-info">Sign In</h4>
-        </div>
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title text-info">Sign In</h4>
+          </div>
 
-        <form id="sign-form">
-          <div class="modal-body">
+          <form id="sign-form">
+            <div class="modal-body">
               <label class="text-primary">Username:</label>
               <input class="form-control" name="username" type="text" required>
               <label class="text-primary">Password:</label>
               <input class="form-control" name="password" type="text" required>
-          </div>
+            </div>
 
-          <div class="modal-footer">
-            <input class="btn btn-default" type="submit" value="Sign In">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
-        </form>
+            <div class="modal-footer">
+              <input class="btn btn-default" type="submit" value="Sign In">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </form>
 
-      </div>
+        </div>
       </div>
     </div>
 
