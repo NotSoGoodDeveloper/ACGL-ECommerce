@@ -35,6 +35,7 @@ $(document).ready(function() {
     });
   });
 
+  // sign in form
   $("#sign-form").submit(function(event) {
     event.preventDefault();
 
@@ -56,5 +57,6 @@ $(document).ready(function() {
         }
       }
     });
-  });
-});
+  }); // END sign form submit
+
+}); // END document ready
