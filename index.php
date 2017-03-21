@@ -35,10 +35,8 @@
             <li><a class="page-scroll" href="#sign">Sign In</a></li>
             <li><a class="page-scroll" href="#project">Project Info</a></li>
           </ul>
-        </div>
-        <!-- /.navbar-collapse -->
-      </div>
-      <!-- /.container -->
+        </div> <!-- :END navbar-collapse -->
+      </div> <!-- :END container -->
     </nav>
 
     <!--
@@ -62,7 +60,7 @@
         </div>
       </div>
       </div>
-    </header>
+    </header> <!-- :END header intro -->
 
     <!--
     ///////////////////////////////////////////////////////////////////////////
@@ -158,9 +156,9 @@
             </div>
           </form>
 
-        </div>
-      </div>
-    </div>
+        </div> <!-- :END modal-content -->
+      </div> <!-- :END modal-dialog -->
+    </div> <!-- :END sign-modal -->
 
     <!-- Sign in Error Modal -->
     <div class="modal fade" id="sign-error-modal" role="dialog">
@@ -180,9 +178,9 @@
           </div>
         </form>
 
-        </div>
-      </div>
-    </div>
+      </div> <!-- :END modal-content -->
+      </div> <!-- :END modal-dialog -->
+    </div> <!-- :END sign-error-modal -->
 
 
     <!--

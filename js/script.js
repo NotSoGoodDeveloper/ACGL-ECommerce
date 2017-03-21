@@ -30,10 +30,12 @@ $(document).ready(function() {
 
   // sign in show modal
   $("#sign-btn").click(function() {
-    $("#sign-modal").modal({
-      backdrop: 'static',
-      keyboard: false
-    });
+
+    $("#sign-error-modal").modal();
+    // $("#sign-modal").modal({
+    //   backdrop: 'static',
+    //   keyboard: false
+    // });
   });
 
   // sign in form
