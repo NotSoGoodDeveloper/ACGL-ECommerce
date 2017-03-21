@@ -3,11 +3,13 @@
 
   $username = $_POST['username'];
   $password = $_POST['password'];
+  $email = $_POST['email'];
 
-  $sql = "SELECT * FROM user WHERE username = '$username' AND password = '$password'";
+  $sql = "INSERT INTO user(username, password, email)
+   VALUES('$username', '$password', '$email')";
   $result = $conn->query($sql);
 
-  if ($result->num_rows > 0) {
+  if ($result === TRUE) {
     $status = 1;
   } else {
     $status = 0;
