@@ -1,3 +1,13 @@
+<?php
+  session_start();
+
+  if (isset($_GET['out'])) {
+    if ($_GET['out'] == 1) {
+      $_SESSION['username'] = '';
+    }
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>

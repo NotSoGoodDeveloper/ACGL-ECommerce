@@ -94,9 +94,9 @@ $(document).ready(function() {
       data: $("#sign-form").serialize(),
       success: function(data) {
 
-        if (data) {
+        if (data["status"]) {
           // open login page
-          window.location = "lib/user.php";
+          window.location = "lib/shop.php";
         } else {
           promptModal("Error Sign In", "Please try again...", "text-danger");
         }
