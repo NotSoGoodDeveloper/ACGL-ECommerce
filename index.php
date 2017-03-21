@@ -192,17 +192,17 @@
       </div> <!-- :END modal-dialog -->
     </div> <!-- :END sign-up-modal -->
 
-    <!-- Error Modal -->
-    <div class="modal fade" id="error-modal" role="dialog">
+    <!-- Prompt Modal -->
+    <div class="modal fade" id="prompt-modal" role="dialog">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title text-danger">Error Title</h4>
+            <h4 class="modal-title">Error Title</h4>
           </div>
 
           <div class="modal-body">
-            <p class="text-danger modal-body-text">Error content.</p>
+            <p class="modal-body-text">Error content.</p>
           </div>
 
           <div class="modal-footer">
@@ -210,7 +210,7 @@
           </div>
         </div> <!-- :END modal-content -->
       </div> <!-- :END modal-dialog -->
-    </div> <!-- :END sign-error-modal -->
+    </div> <!-- :END prompt-modal -->
 
     <!--
     ///////////////////////////////////////////////////////////////////////////

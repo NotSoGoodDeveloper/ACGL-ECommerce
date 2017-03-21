@@ -35,12 +35,21 @@ function isPasswordValid() {
 }
 
 // prompt error
-function promptErrorModal(title, content) {
+function promptModal(title, content, text) {
   console.log("prompt!!!");
   // change title
-  $("#error-modal").modal();
-  $("#error-modal .modal-title").text(title);
-  $("#error-modal .modal-body-text").text(content);
+  $("#prompt-modal").modal();
+  $("#prompt-modal .modal-title").text(title);
+  $("#prompt-modal .modal-body-text").text(content);
+
+  // remove existing text color
+  $("#prompt-modal .modal-title").removeClass("text-danger");
+  $("#prompt-modal .modal-body-text").removeClass("text-danger");
+  $("#prompt-modal .modal-title").removeClass("text-info");
+  $("#prompt-modal .modal-body-text").removeClass("text-info");
+  // update text color
+  $("#prompt-modal .modal-title").addClass(text);
+  $("#prompt-modal .modal-body-text").addClass(text);
 }
 
 // shake
@@ -89,7 +98,7 @@ $(document).ready(function() {
           // open login page
           window.location = "lib/user.php";
         } else {
-          promptErrorModal("Error Sign In", "Please try again...");
+          promptModal("Error Sign In", "Please try again...", "text-danger");
         }
       }
     });
@@ -125,10 +134,10 @@ $(document).ready(function() {
 
         if (data) {
           // show success
-
+          promptModal("Success", "You can now login what you signed up!", "text-info");
         } else {
           // show error
-          promptErrorModal("Error Sign Up", "Please try again...");
+          promptModal("Error Sign Up", "Please try again...", "text-danger");
         }
       }
     });
