@@ -88,7 +88,7 @@
         <div class="container">
         <div class="col-lg-8 col-lg-offset-2">
           <h2>Sign In</h2>
-          <p>If you do not have current accout you can register <a href="#">here</a>.</p>
+          <p>If you do not have current accout you can register <a id="sign-up-btn" href="#">here</a>.</p>
           <button id="sign-btn" class="btn btn-default btn-lg">Sign In</button>
         </div>
         </div>
@@ -160,17 +160,49 @@
       </div> <!-- :END modal-dialog -->
     </div> <!-- :END sign-modal -->
 
-    <!-- Sign in Error Modal -->
-    <div class="modal fade" id="sign-error-modal" role="dialog">
+    <!-- Sign up Modal -->
+    <div class="modal fade" id="sign-up-modal" role="dialog">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title text-danger">Error Sign In</h4>
+            <h4 class="modal-title text-info">Sign Up</h4>
+          </div>
+
+          <form id="sign-up-form">
+            <div class="modal-body">
+              <label class="text-primary">Username:</label>
+              <input class="form-control" name="username" type="text" required>
+              <label class="text-primary">Password:</label>
+              <input class="form-control" id="sign-up-password" name="password" type="password" required>
+              <label class="text-primary">Confirm Password:</label>
+              <label class="text-danger sign-up-pass-prompt" id="sign-up-pass-prompt">Password doesn't match!</label>
+              <input class="form-control" id="sign-up-confirm-password" type="password" required>
+              <label class="text-primary">Email:</label>
+              <input class="form-control" name="email" type="email" required>
+            </div>
+
+            <div class="modal-footer">
+              <input class="btn btn-default" type="submit" value="Sign Up">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </form>
+
+        </div> <!-- :END modal-content -->
+      </div> <!-- :END modal-dialog -->
+    </div> <!-- :END sign-up-modal -->
+
+    <!-- Error Modal -->
+    <div class="modal fade" id="error-modal" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title text-danger">Error Title</h4>
           </div>
 
           <div class="modal-body">
-            <p class="text-danger">Please try again...</p>
+            <p class="text-danger modal-body-text">Error content.</p>
           </div>
 
           <div class="modal-footer">
@@ -179,7 +211,6 @@
         </div> <!-- :END modal-content -->
       </div> <!-- :END modal-dialog -->
     </div> <!-- :END sign-error-modal -->
-
 
     <!--
     ///////////////////////////////////////////////////////////////////////////
