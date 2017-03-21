@@ -1,9 +1,9 @@
 <?php
   session_start();
   // check if username exists
-  $username = $_SESSION['username'];
-  if (isset($username)) {
-    if ($username == "") {
+  $user_id = $_SESSION['user_id'];
+  if (isset($user_id)) {
+    if ($user_id == "") {
       header("Location: log-error.php");
     }
   }
@@ -60,7 +60,7 @@
       </div>
 
       <div id="product-container"></div>
-      
+
     </div>
 
     <!--

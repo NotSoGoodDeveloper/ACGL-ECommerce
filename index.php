@@ -3,7 +3,7 @@
 
   if (isset($_GET['out'])) {
     if ($_GET['out'] == 1) {
-      $_SESSION['username'] = '';
+      $_SESSION['user_id'] = '';
     }
   }
 ?>
