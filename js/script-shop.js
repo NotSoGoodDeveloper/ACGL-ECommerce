@@ -28,4 +28,15 @@ $(window).scroll(collapseNavbar);
 $(document).ready(function() {
   $("#product-container").load("action/shop-product-load.php");
 
+  $("#product-container").on("click", ".btn-cart", function() {
+    var prodId = $(this).data("id");
+    $.getJSON("action/get-user-id.php", function(data) {
+      $.ajax({
+        url: "action/shop-add-cart.php?id_user=" + data + "&id_products=" + prodId,
+        method: "get"
+      });
+    });
+
+  });
+
 });
