@@ -120,15 +120,15 @@ $(document).ready(function() {
       url: "lib/action/sign-up-action.php",
       method: "post",
       dataType: "json",
-      data: $("#sign-form").serialize(),
+      data: $("#sign-up-form").serialize(),
       success: function(data) {
 
         if (data) {
-          // open login page
-          window.location = "lib/user.php";
+          // show success
+
         } else {
           // show error
-          promptErrorModal("Error Sign In", "Please try again...");
+          promptErrorModal("Error Sign Up", "Please try again...");
         }
       }
     });
