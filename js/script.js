@@ -23,6 +23,17 @@ $('.navbar-collapse ul li a').click(function() {
   $(".navbar-collapse").collapse('hide');
 });
 
+// check if passwords match
+function isPasswordValid() {
+    var isValid = false;
+    if ($("#sign-up-password").val() == $("#sign-up-confirm-password").val()) {
+      isValid = true;
+    } else {
+      isValid = false;
+    }
+    return isValid;
+}
+
 $(window).scroll(collapseNavbar);
 
 $(document).ready(function() {
@@ -68,6 +79,45 @@ $(document).ready(function() {
       backdrop: 'static',
       keyboard: false
     });
+  });
+
+  // sign up form
+  $("#sign-up-form").submit(function(event) {
+    event.preventDefault();
+    // prevent execution if password is invalid
+    if (!isPasswordValid()) {
+      return;
+    }
+
+    // close popup
+    $('#sign-modal').modal("hide");
+
+    $.ajax({
+      url: "lib/action/sign-action.php",
+      method: "post",
+      dataType: "json",
+      data: $("#sign-form").serialize(),
+      success: function(data) {
+
+        if (data) {
+          // open login page
+          window.location = "lib/user.php";
+        } else {
+          // show error
+          $("#sign-error-modal").modal();
+        }
+      }
+    });
+  }); // END sign form submit
+
+  $("#sign-up-confirm-password, #sign-up-password").on("input", function(event){
+    if (isPasswordValid()
+      || $("#sign-up-confirm-password").val() == ""
+      || $("#sign-up-password").val() == "") {
+      $("#sign-up-pass-prompt").hide();
+    } else {
+      $("#sign-up-pass-prompt").show();
+    }
   });
 
 }); // END document ready

@@ -180,25 +180,29 @@
       </div> <!-- :END modal-dialog -->
     </div> <!-- :END sign-error-modal -->
 
-    <!-- Sign up Error Modal -->
+    <!-- Sign up Modal -->
     <div class="modal fade" id="sign-up-modal" role="dialog">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title text-info">Sign In</h4>
+            <h4 class="modal-title text-info">Sign Up</h4>
           </div>
 
-          <form id="sign-form">
+          <form id="sign-up-form">
             <div class="modal-body">
               <label class="text-primary">Username:</label>
               <input class="form-control" name="username" type="text" required>
               <label class="text-primary">Password:</label>
-              <input class="form-control" name="password" type="text" required>
+              <input class="form-control" id="sign-up-password" name="password" type="password" required>
+              <label class="text-primary">Confirm Password:</label>
+              <input class="form-control" id="sign-up-confirm-password" type="password" required>
+              <label class="text-primary">Email:</label>
+              <input class="form-control" name="email" type="email" required>
             </div>
 
             <div class="modal-footer">
-              <input class="btn btn-default" type="submit" value="Sign In">
+              <input class="btn btn-default" type="submit" value="Sign Up">
               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             </div>
           </form>
@@ -206,7 +210,6 @@
         </div> <!-- :END modal-content -->
       </div> <!-- :END modal-dialog -->
     </div> <!-- :END sign-error-modal -->
-
 
     <!--
     ///////////////////////////////////////////////////////////////////////////

@@ -349,3 +349,7 @@ body {
   width: 50%;
   height: 400px;
 }
+
+.sign-up-pass-prompt {
+  display: none;
+}
