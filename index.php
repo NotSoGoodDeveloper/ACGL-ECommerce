@@ -196,6 +196,7 @@
               <label class="text-primary">Password:</label>
               <input class="form-control" id="sign-up-password" name="password" type="password" required>
               <label class="text-primary">Confirm Password:</label>
+              <label class="text-danger sign-up-pass-prompt" id="sign-up-pass-prompt">Password doesn't match!</label>
               <input class="form-control" id="sign-up-confirm-password" type="password" required>
               <label class="text-primary">Email:</label>
               <input class="form-control" name="email" type="email" required>
