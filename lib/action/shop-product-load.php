@@ -14,7 +14,7 @@
     ?>
       <div class="col-xs-4">
         <img class="img-responsive" src="../image/products/<?=$row['picture']?>">
-        <button class="btn btn-block btn-primary btn-cart">ADD TO CART</button>
+        <button class="btn btn-block btn-primary btn-cart" data-id="<?=$row['id']?>">ADD TO CART</button>
         <h4 class="product-title"><?=$row['name']?></h4>
         <h5><?=$row['price']?></h5>
         <h6><?=$row['description']?></h6>
