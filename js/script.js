@@ -41,7 +41,7 @@ $(document).ready(function() {
     event.preventDefault();
 
     $.ajax({
-      url: "action/sign-action.php",
+      url: "lib/action/sign-action.php",
       method: "post",
       dataType: "json",
       data: $("#sign-form").serialize(),
@@ -51,7 +51,7 @@ $(document).ready(function() {
 
         if (data) {
           // open login page
-          window.location = "user.php";
+          window.location = "lib/user.php";
         } else {
           // show error
           $("#sign-error-modal").modal();
