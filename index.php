@@ -162,7 +162,7 @@
       </div>
     </div>
 
-    <!-- Sign in Modal -->
+    <!-- Sign in Error Modal -->
     <div class="modal fade" id="sign-error-modal" role="dialog">
       <div class="modal-dialog">
         <div class="modal-content">
