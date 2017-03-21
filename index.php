@@ -210,7 +210,7 @@
 
         </div> <!-- :END modal-content -->
       </div> <!-- :END modal-dialog -->
-    </div> <!-- :END sign-error-modal -->
+    </div> <!-- :END sign-up-modal -->
 
     <!--
     ///////////////////////////////////////////////////////////////////////////
