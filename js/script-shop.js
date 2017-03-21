@@ -26,5 +26,6 @@ $('.navbar-collapse ul li a').click(function() {
 $(window).scroll(collapseNavbar);
 
 $(document).ready(function() {
+  $("#product-container").load("action/shop-product-load.php");
 
 });
