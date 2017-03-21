@@ -19,7 +19,7 @@
 
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/font-awesome.min.css" rel="stylesheet">
-    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/style-shop.css" rel="stylesheet">
   </head>
 
   <body>
@@ -49,6 +49,69 @@
       </div> <!-- :END container -->
     </nav>
 
+    <!--
+    ///////////////////////////////////////////////////////////////////////////
+    :Products
+    ///////////////////////////////////////////////////////////////////////////
+    -->
+    <div class="container products">
+      <div class="row">
+        <h1>Products</h1>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-4">
+          <img class="img-responsive" src="../image/products/laptop_asus_zenbook_ux303.jpg">
+          <button class="btn btn-block btn-primary btn-cart">ADD TO CART</button>
+          <h4 class="product-title">Title</h4>
+          <h5>P123.00</h5>
+          <h6>Description</h6>
+        </div>
+
+        <div class="col-xs-4">
+          <img class="img-responsive" src="../image/products/laptop_asus_zenbook_ux303.jpg">
+          <button class="btn btn-block btn-primary btn-cart">ADD TO CART</button>
+          <h4 class="product-title">Title</h4>
+          <h5>P123.00</h5>
+          <h6 class="product-description">DescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescription</h6>
+        </div>
+
+        <div class="col-xs-4">
+          <img class="img-responsive" src="../image/products/laptop_asus_zenbook_ux303.jpg">
+          <button class="btn btn-block btn-primary btn-cart">ADD TO CART</button>
+          <h4 class="product-title">Title</h4>
+          <h5>P123.00</h5>
+          <h6>Description</h6>
+        </div>
+      </div> <!-- END: row -->
+
+      <div class="row">
+        <div class="col-xs-4">
+          <img class="img-responsive" src="../image/products/laptop_asus_zenbook_ux303.jpg">
+          <button class="btn btn-block btn-primary btn-cart">ADD TO CART</button>
+          <h4 class="product-title">Title</h4>
+          <h5>P123.00</h5>
+          <h6>Description</h6>
+        </div>
+
+        <div class="col-xs-4">
+          <img class="img-responsive" src="../image/products/laptop_asus_zenbook_ux303.jpg">
+          <button class="btn btn-block btn-primary btn-cart">ADD TO CART</button>
+          <h4 class="product-title">Title</h4>
+          <h5>P123.00</h5>
+          <h6>Description</h6>
+        </div>
+
+        <div class="col-xs-4">
+          <img class="img-responsive" src="../image/products/laptop_asus_zenbook_ux303.jpg">
+          <button class="btn btn-block btn-primary btn-cart">ADD TO CART</button>
+          <h4 class="product-title">Title</h4>
+          <h5>P123.00</h5>
+          <h6>Description</h6>
+        </div>
+      </div> <!-- END: row -->
+
+    </div> <!-- END: container -->
 
     <!--
     ///////////////////////////////////////////////////////////////////////////
@@ -56,6 +119,7 @@
     ///////////////////////////////////////////////////////////////////////////
     -->
     <script src="../js/jquery-3.1.1.min.js"></script>
+    <script src="./js/jquery-easing.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/script-shop.js"></script>
 
