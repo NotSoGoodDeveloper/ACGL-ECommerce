@@ -43,6 +43,21 @@ function promptErrorModal(title, content) {
   $("#error-modal .modal-body-text").text(content);
 }
 
+// shake
+function shake(element){
+  var interval = 100;
+  var distance = 10;
+  var times = 4;
+
+  $(element).css('position','relative');
+  for (var iter = 0; iter<(times+1); iter++) {
+    $(element).animate({
+      left:((iter % 2 == 0 ? distance : distance *- 1))
+    }, interval);
+  }
+  $(element).animate({ left: 0}, interval);
+}
+
 $(window).scroll(collapseNavbar);
 
 $(document).ready(function() {
@@ -94,7 +109,7 @@ $(document).ready(function() {
     event.preventDefault();
     // prevent execution if password is invalid
     if (!isPasswordValid()) {
-      promptErrorModal("Error!", "Password doesn't match!");
+      shake($("#sign-up-pass-prompt"));
       return;
     }
 
