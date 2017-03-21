@@ -147,7 +147,7 @@
               <label class="text-primary">Username:</label>
               <input class="form-control" name="username" type="text" required>
               <label class="text-primary">Password:</label>
-              <input class="form-control" name="password" type="text" required>
+              <input class="form-control" name="password" type="password" required>
             </div>
 
             <div class="modal-footer">
