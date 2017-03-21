@@ -160,26 +160,6 @@
       </div> <!-- :END modal-dialog -->
     </div> <!-- :END sign-modal -->
 
-    <!-- Sign in Error Modal -->
-    <div class="modal fade" id="sign-error-modal" role="dialog">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title text-danger">Error Sign In</h4>
-          </div>
-
-          <div class="modal-body">
-            <p class="text-danger">Please try again...</p>
-          </div>
-
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
-        </div> <!-- :END modal-content -->
-      </div> <!-- :END modal-dialog -->
-    </div> <!-- :END sign-error-modal -->
-
     <!-- Sign up Modal -->
     <div class="modal fade" id="sign-up-modal" role="dialog">
       <div class="modal-dialog">
@@ -211,6 +191,26 @@
         </div> <!-- :END modal-content -->
       </div> <!-- :END modal-dialog -->
     </div> <!-- :END sign-up-modal -->
+
+    <!-- Error Modal -->
+    <div class="modal fade" id="error-modal" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title text-danger">Error Title</h4>
+          </div>
+
+          <div class="modal-body">
+            <p class="text-danger modal-body-text">Error content.</p>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div> <!-- :END modal-content -->
+      </div> <!-- :END modal-dialog -->
+    </div> <!-- :END sign-error-modal -->
 
     <!--
     ///////////////////////////////////////////////////////////////////////////

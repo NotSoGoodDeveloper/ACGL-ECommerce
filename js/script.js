@@ -34,6 +34,15 @@ function isPasswordValid() {
     return isValid;
 }
 
+// prompt error
+function promptErrorModal(title, content) {
+  console.log("prompt!!!");
+  // change title
+  $("#error-modal").modal();
+  $("#error-modal .modal-title").text(title);
+  $("#error-modal .modal-body-text").text(content);
+}
+
 $(window).scroll(collapseNavbar);
 
 $(document).ready(function() {
@@ -65,8 +74,7 @@ $(document).ready(function() {
           // open login page
           window.location = "lib/user.php";
         } else {
-          // show error
-          $("#sign-error-modal").modal();
+          promptErrorModal("Error Sign In", "Please try again...");
         }
       }
     });
@@ -86,14 +94,15 @@ $(document).ready(function() {
     event.preventDefault();
     // prevent execution if password is invalid
     if (!isPasswordValid()) {
+      promptErrorModal("Error!", "Password doesn't match!");
       return;
     }
 
     // close popup
-    $('#sign-modal').modal("hide");
+    $('#sign-up-modal').modal("hide");
 
     $.ajax({
-      url: "lib/action/sign-action.php",
+      url: "lib/action/sign-up-action.php",
       method: "post",
       dataType: "json",
       data: $("#sign-form").serialize(),
@@ -104,7 +113,7 @@ $(document).ready(function() {
           window.location = "lib/user.php";
         } else {
           // show error
-          $("#sign-error-modal").modal();
+          promptErrorModal("Error Sign In", "Please try again...");
         }
       }
     });
