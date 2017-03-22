@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 21, 2017 at 10:53 PM
+-- Generation Time: Mar 22, 2017 at 01:50 AM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 7.0.13
 
@@ -40,7 +40,7 @@ CREATE TABLE `products` (
 
 INSERT INTO `products` (`id`, `name`, `price`, `description`, `picture`) VALUES
 (1, 'Asus Zenbook UX303', '300.25', 'ASUS ZenBook series represents the essence of ASUS design spirit, and UX303 takes this to another level of sophistication with fresh and gorgeous new colors including Smoky Brown, Icicle Gold and Rose Gold.', 'laptop_asus_zenbook_ux303.jpg'),
-(2, 'Dell XPS 15', '123.99', 'Our smallest 15.6" (38.1cm) laptop packs powerhouse performance and a stunning InfinityEdge display — all in our most powerful XPS laptop.', 'laptop_dell_xps_15.jpg'),
+(2, 'Dell XPS 15', '123.99', 'Our smallest 15.6" (38.1cm) laptop packs powerhouse performance and a stunning InfinityEdge display all in our most powerful XPS laptop.', 'laptop_dell_xps_15.jpg'),
 (3, 'HP Spectre 13', '321.10', 'This featherweight 13-inch diagonal laptop weighs just 2.45 pounds.', 'laptop_hp_spectre_13.jpg'),
 (4, 'Raspberry Pi Case', '899.99', 'Some case shistsith', 'raspberry_pi_case.jpg'),
 (5, 'Raspberry Pi Model B+', '999.99', 'The main raspberry pi board', 'raspberry_pi_model_b_plus.jpg'),
