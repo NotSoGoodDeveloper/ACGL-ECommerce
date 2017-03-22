@@ -7,6 +7,13 @@ function collapseNavbar() {
   }
 }
 
+// load cart
+function loadCart() {
+  $.getJSON("action/get-user-id.php", function(data) {
+    $("#view-cart-container").load("action/view-cart-load.php?id_user=" + data);
+  });
+}
+
 // jQuery for page scrolling feature - requires jQuery Easing plugin
 $(function() {
   $('a.page-scroll').bind('click', function(event) {
@@ -26,17 +33,17 @@ $('.navbar-collapse ul li a').click(function() {
 $(window).scroll(collapseNavbar);
 
 $(document).ready(function() {
-  $.getJSON("action/get-user-id.php", function(data) {
-    $("#view-cart-container").load("action/view-cart-load.php?id_user=" + data);
-  });
+  loadCart();
 
-  // $("#view-cart-container").on("click", ".btn-remove", function() {
-  //   var prodId = $(this).data("id");
-  //   $.getJSON("action/get-user-id.php", function(data) {
-  //     $.ajax({
-  //       url: "action/view-cart-load.php?id_user=" + data + "&id_products=" + prodId,
-  //       method: "get"
-  //     });
-  //   });
+  $("#view-cart-container").on("click", ".btn-remove", function() {
+    var prodId = $(this).data("prod");
+    $.ajax({
+      url: "action/delete-cart.php?id_products=" + prodId,
+      method: "get",
+      success: function() {
+        loadCart();
+      }
+    });
+  });
 
 });

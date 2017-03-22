@@ -1,11 +1,8 @@
 <?php
   include '../db.php';
   $id_user = $_GET['id_user'];
-  // $id_products = $_GET['id_products'];
 
-  echo "USERID: $id_user";
-
-  $sql = "SELECT p.name, p.price
+  $sql = "SELECT p.id, p.name, p.price
   FROM products AS p, user AS u, user_cart AS uc
   WHERE uc.id_products = p.id AND uc.id_user = " . $id_user;
 
@@ -17,7 +14,7 @@
       <tr>
         <td><?=$row['name']?></td>
         <td><?=$row['price']?></td>
-        <td class="control"><button class="btn btn-danger btn-remove" data-id="<?=$id_user?>" data-prod="<?=$id_products?>"><span class="fa fa-close"></span></button></td>
+        <td class="control"><button class="btn btn-danger btn-remove" data-id="<?=$id_user?>" data-prod="<?=$row['id']?>"><span class="fa fa-close"></span></button></td>
       </tr>
     <?php
       $total_price += $row['price'];
@@ -27,6 +24,12 @@
         <td>Total</td>
         <td><?=$total_price?></td>
       </tr>
+    <?php
+  } else {
+    ?>
+    <tr>
+      <td>Please go to shop and add some items to cart.</td>
+    </tr>
     <?php
   }
 ?>
