@@ -7,6 +7,14 @@ function collapseNavbar() {
   }
 }
 
+// prompt
+function promptModal(title, content) {
+  // change title
+  $("#prompt-modal").modal();
+  $("#prompt-modal .modal-title").text(title);
+  $("#prompt-modal .modal-body-text").text(content);
+}
+
 // jQuery for page scrolling feature - requires jQuery Easing plugin
 $(function() {
   $('a.page-scroll').bind('click', function(event) {
@@ -33,10 +41,17 @@ $(document).ready(function() {
     $.getJSON("action/get-user-id.php", function(data) {
       $.ajax({
         url: "action/shop-add-cart.php?id_user=" + data + "&id_products=" + prodId,
-        method: "get"
-      });
-    });
+        method: "get",
+        dataType: "json",
+        success: function(data) {
+          if (data == 1) {
+            promptModal("Success", "Item is added to cart.");
+          } else if (data == 2) {
+            promptModal("Error", "Item is already added to cart.");
+          }
+        }
+      }); // END: ajax
+    }); // END: getJSON
+  }); // END: product-container
 
-  });
-
-});
+}); // END: document.read
