@@ -4,7 +4,7 @@
 
   $sql = "SELECT p.id, p.name, p.price
   FROM products AS p, user AS u, user_cart AS uc
-  WHERE uc.id_products = p.id AND uc.id_user = " . $id_user;
+  WHERE uc.id_products = p.id AND uc.id_user = u.id AND uc.id_user = " . $id_user;
 
   $result = $conn->query($sql);
   if ($result->num_rows > 0) {
