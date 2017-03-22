@@ -81,6 +81,31 @@
 
     <!--
     ///////////////////////////////////////////////////////////////////////////
+    :Modals
+    ///////////////////////////////////////////////////////////////////////////
+    -->
+    <!-- Prompt Modal -->
+    <div class="modal fade" id="prompt-modal" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Item Added!</h4>
+          </div>
+
+          <div class="modal-body">
+            <p class="modal-body-text">Item is added to cart</p>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div> <!-- :END modal-content -->
+      </div> <!-- :END modal-dialog -->
+    </div> <!-- :END prompt-modal -->
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////
     :Script
     ///////////////////////////////////////////////////////////////////////////
     -->
