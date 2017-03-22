@@ -1,5 +1,7 @@
 <?php
   session_start();
+  include 'db.php';
+
   // check if username exists
   $user_id = $_SESSION['user_id'];
   if (isset($user_id)) {
@@ -7,6 +9,11 @@
       header("Location: log-error.php");
     }
   }
+
+  // get name
+  $sql = "SELECT username FROM user WHERE id = " . $user_id;
+  $result = $conn->query($sql);
+  $row = $result->fetch_assoc();
 ?>
 
 <!DOCTYPE html>
@@ -55,6 +62,10 @@
     ///////////////////////////////////////////////////////////////////////////
     -->
     <div class="container products">
+      <div class="row">
+        <h1>Hello <?=$row['username']?>!</h1>
+      </div>
+
       <div class="row">
         <h1>Products</h1>
       </div>
