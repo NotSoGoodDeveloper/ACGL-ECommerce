@@ -20,6 +20,12 @@
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/font-awesome.min.css" rel="stylesheet">
     <link href="../css/style-shop.css" rel="stylesheet">
+
+    <style>
+      .control {
+        width: 48px;
+      }
+    </style>
   </head>
 
   <body>
@@ -59,7 +65,17 @@
         <h1>Products</h1>
       </div>
 
-      <div id="product-container"></div>
+      <table class="table table-responsive">
+        <thead>
+          <tr>
+            <th>Product Name</th>
+            <th>Price</th>
+            <th>Control</th>
+          </tr>
+        </thead>
+
+        <tbody id="view-cart-container"></tbody>
+      </table>
 
     </div>
 
@@ -71,7 +87,7 @@
     <script src="../js/jquery-3.1.1.min.js"></script>
     <script src="./js/jquery-easing.js"></script>
     <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/script-shop.js"></script>
+    <script src="../js/script-cart.js"></script>
 
   </body>
 </html>
