@@ -11,6 +11,7 @@
 
   $result = $conn->query($sql);
   if ($result->num_rows > 0) {
+    $total_price = 0;
     while ($row = $result->fetch_assoc()) {
     ?>
       <tr>
@@ -19,6 +20,13 @@
         <td class="control"><button class="btn btn-danger btn-remove" data-id="<?=$id_user?>" data-prod="<?=$id_products?>"><span class="fa fa-close"></span></button></td>
       </tr>
     <?php
+      $total_price += $row['price'];
     }
+    ?>
+      <tr>
+        <td>Total</td>
+        <td><?=$total_price?></td>
+      </tr>
+    <?php
   }
 ?>
